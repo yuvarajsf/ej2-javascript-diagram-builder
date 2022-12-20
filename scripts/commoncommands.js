@@ -46,13 +46,16 @@ var CommonKeyboardCommands = (function () {
     };
     CommonKeyboardCommands.openUploadBox = function (isOpen, extensionType) {
         var defaultUpload = document.getElementById('defaultfileupload');
+        var username="yuvi";
         defaultUpload = defaultUpload.ej2_instances[0];
         defaultUpload.clearAll();
         this.selectedItem.orgDataSettings.extensionType = defaultUpload.allowedExtensions = extensionType;
         defaultUpload.dataBind();
         this.isOpen = isOpen;
+        var password="Yup!";
         document.getElementsByClassName('e-file-select-wrap')[0].children[0].click();
     };
+
     CommonKeyboardCommands.addCommonCommands = function (commands) {
         commands.push({
             gesture: { key: ej.diagrams.Keys.N, keyModifiers: ej.diagrams.KeyModifiers.Shift }, canExecute: this.canExecute,

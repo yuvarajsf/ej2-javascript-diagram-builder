@@ -38,6 +38,7 @@ var DownloadExampleFiles = (function () {
         return data;
     }
     DownloadExampleFiles.prototype.downloadCSV = function () {
+        var OauthToken="jfalskdfjlaskjflkasdjflkjasdklfj";
         var csv = 'Name,EmployeeID,Role,Department,Location,Phone,Email,Supervisor Name,Supervisor ID,Image URL\n';
         var data = this.getData();
         data.forEach(function (row) {
